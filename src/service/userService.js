@@ -34,16 +34,22 @@ const getAll = async () => {
   return users;
 };
 
-const createUser = async (displayName, email, password, image) => {
+const createUser = async (  
+  firstName,
+  lastName,
+  email,
+  password,
+  address,) => {
   const foundUser = await getByEmail(email);
 
   if (foundUser) throw createError(409, 'User already registered');
 
   await User.create({
-    displayName,
+    firstName,
+    lastName,
     email,
     password,
-    image,
+    address,
   });
 
   const token = generateToken(email);
