@@ -2,23 +2,74 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+    return queryInterface.bulkInsert(
+      'User',
+      [
+        {
+          firstName: 'Avraham',
+          lastName: 'Avinu ',
+          password: '123456',
+          email: 'leo@test.com',
+          address: 'Fools street, 10',
+          createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+        },
+        {
+          firstName: 'Itzhak',
+          lastName: 'ben Avraham ',
+          password: '123456',
+          email: 'leo@test.com',
+          address: 'Fools street, 10',
+          createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+        },
+        {
+          firstName: 'Yaakov',
+          lastName: 'ben Itzhak ',
+          password: '123456',
+          email: 'leo@test.com',
+          address: 'Fools street, 10',
+          createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+        },
+        {
+          firstName: 'Yosef',
+          lastName: 'ben Yaakov ',
+          password: '123456',
+          email: 'leo@test.com',
+          address: 'Fools street, 10',
+  
+          createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+        },
+        {
+          firstName: 'Moshe',
+          lastName: 'Abeinu ',
+          password: '123456',
+          email: 'leo@test.com',
+          address: 'Fools street, 10',
+  
+          createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+        }, {
+          firstName: 'David HaMelech',
+          lastName: 'ben Father ',
+          password: '123456',
+          email: 'leo@test.com',
+          address: 'Fools street, 10',
+  
+          createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+        },
+  
+      ],
+
+      {},
+
+    )  
   },
 
-  async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+  async down (queryInterface, _Sequelize) {
+    return queryInterface.bulkDelete('User', null, {});
   }
 };
