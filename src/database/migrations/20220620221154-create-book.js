@@ -12,16 +12,19 @@ module.exports = {
         type: Sequelize.STRING
       },
       description: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
-      category: {
-        type: Sequelize.STRING
+      numberPages: {
+        type: Sequelize.INTEGER
       },
-      author: {
-        type: Sequelize.STRING
+      categoryId: {
+        type: Sequelize.INTEGER
+      },
+      authorId: {
+        type: Sequelize.INTEGER
       },
       releaseYear: {
-        type: Sequelize.NUMBER
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

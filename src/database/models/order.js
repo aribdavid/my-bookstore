@@ -7,16 +7,16 @@ const Order = (sequelize, DataTypes) => {
 
   order.associate = ({ User }) => {
     order.belongsTo(User, {
-      foreignKey: 'userId',
-      as: 'user',
+      foreignKey: 'id',
+      as: 'userId',
       onDelete: 'CASCADE'
     });
   }
 
   order.associate = ({ Book }) => {
     order.belongsTo(Book, {
-      foreignKey: 'bookId',
-      as: 'book',
+      foreignKey: 'id',
+      as: 'bookId',
       onDelete: 'CASCADE'
     });
   }

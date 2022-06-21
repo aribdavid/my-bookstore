@@ -2,11 +2,11 @@ const Book = (sequelize, DataTypes) => {
   const book = sequelize.define('Book', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     title: DataTypes.STRING,
-    description: DataTypes.STRING,
+    description: DataTypes.TEXT,
     numberPages: DataTypes.INTEGER,
-    categoryId: DataTypes.STRING,
+    categoryId: DataTypes.INTEGER,
     authorId: DataTypes.INTEGER,
-    releaseYear: DataTypes.NUMBER
+    releaseYear: DataTypes.INTEGER
   });
 
   book.associate = ({ Author }) => {
