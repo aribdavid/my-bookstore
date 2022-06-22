@@ -9,15 +9,15 @@ Foi utilizado express como framework pra criação da aplicação, sequelize par
 
 ## Funcionalidades
 
-1 - Cria um novo usuário
-2 - Realiza login de usuário já cadastrado
-3 - Retorna todos usuários cadastrados ou individualmente de acordo com id
-4 - Deleta um usuário
-5 - Cria uma nova compra de um livro
-6 - Retorna compras já realizadas
-7 - Retorna as categorias cadastrdas ou individualmente de acordo com id
-8 - Retorna os livros cadastrados ou individualmente de acordo com id
-9 - Retorna os autores já cadastrados ou individualmente de acordo com id
+1 - Cria um novo usuário <br/>
+2 - Realiza login de usuário já cadastrado <br/>
+3 - Retorna todos usuários cadastrados ou individualmente de acordo com id <br/>
+4 - Deleta um usuário <br/>
+5 - Cria uma nova compra de um livro <br/>
+6 - Retorna compras já realizadas <br/>
+7 - Retorna as categorias cadastrdas ou individualmente de acordo com id <br/>
+8 - Retorna os livros cadastrados ou individualmente de acordo com id <br/>
+9 - Retorna os autores já cadastrados ou individualmente de acordo com id <br/>
 
 ## App em funcionamento
 
@@ -30,7 +30,7 @@ email e senha registrados ou utilizando o exemplo abaixo:
 
 `{
 
-"email": "leo@test.com"
+"email": "leo@test.com", <br/>
 "password: "123456"
 
 }`
