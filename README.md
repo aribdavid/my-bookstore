@@ -2,10 +2,10 @@
 
 ## Descrição
 
-Para o desafio da vaga de desenvolvedor Backend foi criado em Nodejs uma API RESTful de uma livraria. A aplicação foi hospedada no Heroku
-por meio de um container Docker e o banco de dados está hospedado no Supabase.
+Para o desafio da vaga de desenvolvedor Backend foi criado em **Nodejs** uma API RESTful de uma livraria. A aplicação foi hospedada no **Heroku**
+por meio de um container **Docker** e o banco de dados está hospedado no **Supabase**.
 A arquitetura empregada foi o modelo MVC ( Model View Controller ) utilizando-se de uma camada extra Service entre a camada Model e Controller.
-Foi utilizado express como framework pra criação da aplicação, sequelize para fazer ORM com o banco de dados PostgresSQL, além de JWT para autenticação.
+Foi utilizado **Express** como framework pra criação da aplicação, **Sequelize** para fazer ORM com o banco de dados PostgresSQL, além de **JWT** para autenticação.
 
 ## Funcionalidades
 
@@ -38,7 +38,7 @@ email e senha registrados ou utilizando o exemplo abaixo:
 
 ```
 
-A requisição retorna um token que você DEVE incluir no campo authorization em todas as requisições GET
+A requisição retorna um token que você **DEVE** incluir no campo authorization em **TODAS** as requisições GET
 
 Você pode também usar o seguinte token nas requisições para evitar fazer o login:
 
@@ -46,25 +46,25 @@ Você pode também usar o seguinte token nas requisições para evitar fazer o l
 
 ## Endpoints GET
 
-  /order - retorna todos os pedidos <br/>
-  /user - retorna todos os usuários <br/>
-  /user/:id - retorna usuário de acordo com id <br/>
-  /category - retorna todas as categorias <br/>
-  /category/:id - retorna categoria de acordo com id <br/>
-  /book - retorna todos os livros <br/>
-  /book/:id - retorna livro de acordo com id <br/>
-  /author - retorna todos os autores <br/>
-  /author/:id - retorna autor de acordo com id <br/>
+  **/order** - retorna todos os pedidos <br/>
+  **/user** - retorna todos os usuários <br/>
+  **/user/:id** - retorna usuário de acordo com id <br/>
+  **/category** - retorna todas as categorias <br/>
+  **/category/:id** - retorna categoria de acordo com id <br/>
+  **/book** - retorna todos os livros <br/>
+  **/book/:id** - retorna livro de acordo com id <br/>
+  **/author** - retorna todos os autores <br/>
+  **/author/:id** - retorna autor de acordo com id <br/>
   
 ## Endpoints POST
  
- /login - loga com um usuário existente <br/>
- /user - cria novo usuário <br/>
- /order - cria novo pedido <br/>
+ **/login** - loga com um usuário existente <br/>
+ **/user** - cria novo usuário <br/>
+ **/order** - cria novo pedido <br/>
  
 ## Endpoints DELETE
 
-/user - deleta o usuário cujo token ele está sendo utilizado
+**/user** - deleta o usuário cujo token ele está sendo utilizado
 
 ## Instalação
 
@@ -82,6 +82,6 @@ Você pode também usar o seguinte token nas requisições para evitar fazer o l
 
 `cd my-bookstore` <br/>
 `docker build -t my-bookstore-api .` <br/>
-`docker run -p 3300:3300 -d my-bookstore-api` obs: a porta especificada nesse comando será a porta de acesso para aplicação no seu localhost <br/>
-
+`docker run -p 3300:3300 -d my-bookstore-api` <br/>
+**obs: a porta especificada no comando acima será a porta de acesso para aplicação no seu localhost**
 
