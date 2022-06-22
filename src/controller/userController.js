@@ -1,12 +1,12 @@
 const userService = require('../service/userService');
 
 const createUser = async (request, response) => {
-  const {   
+  const {
     firstName,
     lastName,
     email,
     password,
-    address, 
+    address,
   } = request.body;
 
   const token = await userService.createUser(
@@ -14,10 +14,10 @@ const createUser = async (request, response) => {
     lastName,
     email,
     password,
-    address,   
-    );
+    address,
+  );
 
-   response.status(201).json({ token });
+  response.status(201).json({ token });
 };
 
 const getAll = async (_request, response) => {
@@ -35,9 +35,9 @@ const getById = async (request, response) => {
 
 const deleteUser = async (request, response) => {
   const { decodedData } = request;
-  
+
   await userService.deleteUser(decodedData);
-  
+
   return response.status(204).end();
 };
 module.exports = {

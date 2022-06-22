@@ -9,9 +9,9 @@ const Author = (sequelize, DataTypes) => {
   author.associate = ({ Book }) => {
     author.hasMany(Book, {
       foreignKey: 'authorId',
-      onDelete: 'CASCADE'
+      onDelete: 'CASCADE',
     });
-  }
+  };
 
   return author;
 };

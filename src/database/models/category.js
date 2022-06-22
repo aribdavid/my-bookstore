@@ -1,16 +1,16 @@
 const Category = (sequelize, DataTypes) => {
-  const Category = sequelize.define('Category', {
+  const category = sequelize.define('Category', {
     name: DataTypes.STRING,
   });
 
-  Category.associate = ({ Book }) => {
-    Category.hasMany(Book, {
+  category.associate = ({ Book }) => {
+    category.hasMany(Book, {
       foreignKey: 'categoryId',
-      onDelete: 'CASCADE'
+      onDelete: 'CASCADE',
     });
-  }
+  };
 
-  return Category;
+  return category;
 };
 
 module.exports = Category;

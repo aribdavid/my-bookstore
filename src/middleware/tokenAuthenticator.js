@@ -13,5 +13,4 @@ module.exports = async (request, _response, next) => {
   request.decodedData = decoded.data;
 
   next();
-
-}
+};

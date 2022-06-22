@@ -1,20 +1,20 @@
 const schemaNewUser = require('../joi/validateNewUser');
 
 module.exports = (request, response, next) => {
-  const {   
+  const {
     firstName,
     lastName,
     email,
     password,
     address,
-   } = request.body;
+  } = request.body;
 
-  const { error } = schemaNewUser.validate({   
+  const { error } = schemaNewUser.validate({
     firstName,
     lastName,
     email,
     password,
-    address, 
+    address,
   });
 
   if (error) throw response.status(400).json({ message: error.message });

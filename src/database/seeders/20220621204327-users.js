@@ -1,7 +1,5 @@
-'use strict';
-
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     return queryInterface.bulkInsert(
       'Users',
       [
@@ -38,7 +36,7 @@ module.exports = {
           password: '123456',
           email: 'leo@test.com',
           address: 'Fools street, 10',
-  
+
           createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
           updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
@@ -48,29 +46,29 @@ module.exports = {
           password: '123456',
           email: 'leo@test.com',
           address: 'Fools street, 10',
-  
+
           createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
           updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
-        }, 
+        },
         {
           firstName: 'David HaMelech',
           lastName: 'ben Father ',
           password: '123456',
           email: 'leo@test.com',
           address: 'Fools street, 10',
-  
+
           createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
           updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
-  
+
       ],
 
       {},
 
-    )  
+    );
   },
 
-  async down (queryInterface, _Sequelize) {
+  async down(queryInterface) {
     return queryInterface.bulkDelete('Users', null, {});
-  }
+  },
 };

@@ -1,4 +1,4 @@
-const categoryService = require("../service/categoryService")
+const categoryService = require('../service/categoryService');
 
 const getAll = async (_request, response) => {
   const categories = await categoryService.getAll();
@@ -15,5 +15,5 @@ const getById = async (request, response) => {
 
 module.exports = {
   getAll,
-  getById
-}
+  getById,
+};

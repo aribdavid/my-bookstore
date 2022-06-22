@@ -3,8 +3,7 @@ const login = require('./loginRouter');
 const order = require('./orderRouter');
 const book = require('./bookRouter');
 const author = require('./authorRouter');
-const category = require('./categoryRouter')
-
+const category = require('./categoryRouter');
 
 module.exports = {
   user,
@@ -12,5 +11,5 @@ module.exports = {
   order,
   book,
   author,
-  category
+  category,
 };

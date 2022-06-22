@@ -1,4 +1,5 @@
 const { Author } = require('../database/models');
+const createError = require('../utils/createError');
 
 const getAll = async () => {
   const authors = await Author.findAll({
@@ -20,10 +21,7 @@ const getById = async (id) => {
   return author;
 };
 
-
-
 module.exports = {
   getAll,
-  getById
-}
-
+  getById,
+};

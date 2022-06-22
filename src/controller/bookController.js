@@ -15,5 +15,5 @@ const getById = async (request, response) => {
 
 module.exports = {
   getAll,
-  getById
-}
+  getById,
+};

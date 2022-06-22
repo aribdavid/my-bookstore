@@ -1,4 +1,4 @@
-const { User } = require('../database/models/index'); 
+const { User } = require('../database/models/index');
 const createError = require('../utils/createError');
 const generateToken = require('../utils/jwtGenerator');
 
@@ -34,12 +34,13 @@ const getAll = async () => {
   return users;
 };
 
-const createUser = async (  
+const createUser = async (
   firstName,
   lastName,
   email,
   password,
-  address,) => {
+  address,
+) => {
   const foundUser = await getByEmail(email);
 
   if (foundUser) throw createError(409, 'User already registered');
@@ -73,4 +74,4 @@ module.exports = {
   getById,
   getByEmail,
   deleteUser,
-};    
+};

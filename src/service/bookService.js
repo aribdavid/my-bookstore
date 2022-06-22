@@ -1,4 +1,5 @@
 const { Book } = require('../database/models');
+const createError = require('../utils/createError');
 
 const getAll = async () => {
   const books = await Book.findAll({
@@ -20,9 +21,7 @@ const getById = async (id) => {
   return book;
 };
 
-
 module.exports = {
   getAll,
-  getById
-}
-
+  getById,
+};

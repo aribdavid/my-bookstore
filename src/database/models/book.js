@@ -6,29 +6,30 @@ const Book = (sequelize, DataTypes) => {
     categoryId: DataTypes.INTEGER,
     description: DataTypes.TEXT,
     numberPages: DataTypes.INTEGER,
-    releaseYear: DataTypes.INTEGER
+    releaseYear: DataTypes.INTEGER,
   });
 
   book.associate = ({ Author }) => {
     book.belongsTo(Author, {
       foreignKey: 'authorId',
-      onDelete: 'CASCADE'
+      onDelete: 'CASCADE',
     });
-  }
+  };
 
   book.associate = ({ Category }) => {
     book.belongsTo(Category, {
       foreignKey: 'categoryId',
-      onDelete: 'CASCADE'
+      onDelete: 'CASCADE',
     });
-  }
+  };
 
+  // eslint-disable-next-line camelcase
   book.associate = ({ Order_item }) => {
     book.hasMany(Order_item, {
       foreignKey: 'bookId',
-      onDelete: 'CASCADE'
+      onDelete: 'CASCADE',
     });
-  }
+  };
 
   return book;
 };

@@ -1,40 +1,37 @@
-'use strict';
-
 module.exports = {
   async up(queryInterface, Sequelize) {
     return queryInterface.bulkInsert(
       'Categories',
       [
         {
-          name: "Fantasy",
+          name: 'Fantasy',
           createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
           updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
         {
-          name: "Science Fiction",
+          name: 'Science Fiction',
           createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
           updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
         {
-          name: "History",
+          name: 'History',
           createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
           updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
         {
-          name: "Literary Fiction",
+          name: 'Literary Fiction',
           createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
           updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
-
 
       ],
 
       {},
 
-    )
+    );
   },
 
-  async down(queryInterface, _Sequelize) {
+  async down(queryInterface) {
     return queryInterface.bulkDelete('Categories', null, {});
-  }
+  },
 };

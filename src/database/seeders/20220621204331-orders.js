@@ -1,7 +1,5 @@
-'use strict';
-
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     return queryInterface.bulkInsert(
       'Orders',
       [
@@ -35,7 +33,7 @@ module.exports = {
           createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
           updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
-         {
+        {
           userId: 3,
           createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
           updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
@@ -54,15 +52,15 @@ module.exports = {
           userId: 2,
           createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
           updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
-        }, 
+        },
       ],
 
       {},
 
-    )  
+    );
   },
 
-  async down (queryInterface, _Sequelize) {
+  async down(queryInterface) {
     return queryInterface.bulkDelete('Orders', null, {});
-  }
+  },
 };

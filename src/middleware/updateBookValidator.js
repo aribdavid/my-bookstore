@@ -1,21 +1,22 @@
 const schemaNewBook = require('../joi/validateNewBook');
 
 module.exports = (request, response, next) => {
-  const { 
+  const {
     title,
     description,
     numberPages,
     categoryId,
     authorId,
-    releaseYear, } = request.body;
+    releaseYear,
+  } = request.body;
 
-  const { error } = schemaNewBook.validate({  
+  const { error } = schemaNewBook.validate({
     title,
     description,
     numberPages,
     categoryId,
     authorId,
-    releaseYear, 
+    releaseYear,
   });
 
   if (error) throw response.status(400).json({ message: error.message });
