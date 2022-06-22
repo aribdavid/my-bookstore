@@ -31,7 +31,7 @@ email e senha registrados ou utilizando o exemplo abaixo:
 ```
 {
 
-"email": "leo@test.com", <br/>
+"email": "leo@test.com",
 "password: "123456"
 
 }
