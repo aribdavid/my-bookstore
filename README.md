@@ -46,21 +46,21 @@ Você pode também usar o seguinte token nas requisições para evitar fazer o l
 
 ## Endpoints GET
 
-  /order - retorna todos os pedidos
-  /user - retorna todos os usuários
-  /user/:id - retorna usuário de acordo com id
-  /category - retorna todas as categorias
-  /category/:id - retorna categoria de acordo com id
-  /book - retorna todos os livros
-  /book/:id - retorna livro de acordo com id
-  /author - retorna todos os autores
-  /author/:id - retorna autor de acordo com id
+  /order - retorna todos os pedidos <br/>
+  /user - retorna todos os usuários <br/>
+  /user/:id - retorna usuário de acordo com id <br/>
+  /category - retorna todas as categorias <br/>
+  /category/:id - retorna categoria de acordo com id <br/>
+  /book - retorna todos os livros <br/>
+  /book/:id - retorna livro de acordo com id <br/>
+  /author - retorna todos os autores <br/>
+  /author/:id - retorna autor de acordo com id <br/>
   
 ## Endpoints POST
  
- /login - loga com um usuário existente
- /user - cria novo usuário
- /order - cria novo pedido
+ /login - loga com um usuário existente <br/>
+ /user - cria novo usuário <br/>
+ /order - cria novo pedido <br/>
  
 ## Endpoints DELETE
 
