@@ -1,7 +1,22 @@
 const orderService = require('../service/orderService');
 
 
-const getAll = (_request, response) => {
+
+const createOrder = async (request, response) => {
+  const {   
+    email, 
+    order_items
+  } = request.body;
+
+  const token = await orderService.createOrder(
+    email, 
+    order_items
+    );
+
+   response.status(201).json({ token });
+};
+
+const getAll = async (_request, response) => {
   
   const orders = await orderService.getAll();
 
@@ -10,5 +25,6 @@ const getAll = (_request, response) => {
 
 
 module.exports = {
-  getAll
+  getAll,
+  createOrder
 }

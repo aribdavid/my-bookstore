@@ -1,42 +1,49 @@
-const { Order, Order_item } = require('../database/models/index'); 
+const { Order, Order_item, User } = require('../database/models/index'); 
 const createError = require('../utils/createError');
-const userService = require('./userService');
 
 
+const getByEmail = async (email) => {
+  const user = await User.findOne({
+    where: {
+      email,
+    },
+  });
 
-const createOrder = async ( email, order_items) => {
+  return user.id;
+};
 
-  const user = userService.getByEmail(email);
-  const items  = order_items;
+const createOrder = async ( email, order_items ) => {
 
-  const order = await Order.create({
-    userId: user.id
+  const user = await getByEmail(email);
+  
+  const order = await  Order.create({
+    userId: user
   });
   
+  const items  = order_items;
+  
   if(items.length === 1){
-  await Order_item.create({
-    orderId: order,
+   await Order_item.create({
+    orderId: order.id,
     bookId: items.bookId,
     quantity: items.bookId,
   })
   }
 
   if(items.length > 1){
-    items.forEach((item) => {
-      await Order_item.create({
-        orderId: order,
+    items.forEach(async (item) => {
+     await Order_item.create({
+        orderId: order.id,
         bookId: item.bookId,
         quantity: item.bookId,
       })
     })
-
     }
 
 };
 
 const getAll = async () => {
   const orders = await Order.findAll({
-    attributes: attributes,
     include: [{
       model: Order_item,
       required: true,
@@ -45,7 +52,9 @@ const getAll = async () => {
     order:[['id', 'ASC']]
   });
 
-  return orders;
+  return  orders;
+
+  
 };
 
 module.exports = {

@@ -9,7 +9,7 @@ const getByEmail = async (email) => {
     },
   });
 
-  return user;
+  return user.id;
 };
 
 const getById = async (id) => {
