@@ -9,5 +9,5 @@ module.exports = (token) => {
     return decoded;
   } catch (error) {
     return createError(401, 'Expired or invalid token');
-  }  
+  }
 };

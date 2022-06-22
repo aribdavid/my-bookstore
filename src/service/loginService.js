@@ -1,12 +1,8 @@
 const { User } = require('../database/models');
 const generateToken = require('../utils/jwtGenerator');
 
-// const loginValidator = require('../middleware/loginValidator');
-
 module.exports = async (request, response) => {
   const { email, password } = request.body;
-
-  // if (!loginValidator(request.body, response)) return;
 
   const user = await User.findOne({ where: { email, password } });
 
