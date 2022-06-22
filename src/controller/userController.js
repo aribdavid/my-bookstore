@@ -20,7 +20,7 @@ const createUser = async (request, response) => {
    response.status(201).json({ token });
 };
 
-const getAll = async (request, response) => {
+const getAll = async (_request, response) => {
   const users = await userService.getAll();
 
   return response.status(200).json(users);

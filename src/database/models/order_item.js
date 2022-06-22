@@ -1,5 +1,5 @@
 const Order_item = (sequelize, DataTypes) => {
-  const order = sequelize.define('Order', {
+  const order = sequelize.define('Order_item', {
     orderId: DataTypes.INTEGER,
     bookId: DataTypes.INTEGER,
     quantity: DataTypes.INTEGER
