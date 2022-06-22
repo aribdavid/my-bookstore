@@ -9,7 +9,7 @@ const router = express.Router();
 
 
 router.get('/category',rescue(tokenAuthenticator), rescue(categoryController.getAll));
-// router.get('/category/:id', rescue(tokenAuthenticator), rescue(categoryController.getById));
+router.get('/category/:id', rescue(tokenAuthenticator), rescue(categoryController.getById));
 
 
 module.exports = router;

@@ -9,7 +9,7 @@ const router = express.Router();
 
 
 router.get('/book',rescue(tokenAuthenticator), rescue(bookController.getAll));
-// router.get('/book/:id', rescue(tokenAuthenticator), rescue(bookController.getById));
+router.get('/book/:id', rescue(tokenAuthenticator), rescue(bookController.getById));
 
 
 module.exports = router;
