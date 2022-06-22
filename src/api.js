@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const errorHandler = require('./middleware/errorHandler');
-const { user, login, order } = require('./router/index.js')
+const { user, login, order,  book, author, category } = require('./router/index.js')
 
 
 const app = express();
@@ -17,7 +17,10 @@ app.use(express.json());
 
 app.use('/',user);
 app.use('/', login);
-app.use('/', order);
+app.use('/', book);
+app.use('/', author);
+app.use('/', category);
+
 
 // app.use(errorHandler);
 
