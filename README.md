@@ -64,7 +64,7 @@ Você pode também usar o seguinte token nas requisições para evitar fazer o l
  
 ## Endpoints DELETE
 
-**/user** - deleta o usuário cujo token ele está sendo utilizado
+**/user** - deleta o usuário cujo token está sendo utilizado
 
 ## Instalação
 
