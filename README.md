@@ -1,14 +1,11 @@
-# Bindsco BackEnd Challenge
-
-## Observações
-
+# Binds.co BackEnd Challenge
 
 ## Descrição
 
 Para o desafio da vaga de desenvolvedor Backend foi criado em Nodejs uma API RESTful de uma livraria. A aplicação foi hospedada no Heroku
 por meio de um container Docker e o banco de dados está hospedado no Supabase.
 A arquitetura empregada foi o modelo MVC ( Model View Controller ) utilizando-se de uma camada extra Service entre a camada Model e Controller.
-Foi utilizado express como framework pra criação da aplicação, sequelize para fazer ORM com o banco de dados, além de JWT para autenticação.
+Foi utilizado express como framework pra criação da aplicação, sequelize para fazer ORM com o banco de dados PostgresSQL, além de JWT para autenticação.
 
 ## Funcionalidades
 
@@ -25,8 +22,11 @@ Foi utilizado express como framework pra criação da aplicação, sequelize par
 ## App em funcionamento
 
 Aplicação se encontra hospedada no link https://aribdavid-my-bookstore.herokuapp.com/ . 
+
+## Observações
+
 Todas as rotas GET são autenticadas, para obter o token de autenticação você deve realizar uma requisição para o endpoint /login preenchendo o body com seu 
-email e senha ou com o exemplo abaixo:
+email e senha registrados ou utilizando o exemplo abaixo:
 
 `{
 
@@ -38,6 +38,7 @@ email e senha ou com o exemplo abaixo:
 A requisição retorna um token que você DEVE incluir no campo authorization em todas as requisições GET
 
 Você pode também usar o seguinte token nas requisições para evitar fazer o login:
+
 `"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoibGVvQHRlc3QuY29tIiwiaWF0IjoxNjU1ODcyODM4LCJleHAiOjE2NTU4NzM3Mzh9.-NQ7HkRlRb3AsFc_bsiqN5s9Zxe72tRNVYUvt4YUbPo"`
 
 ## Endpoints GET
