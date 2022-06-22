@@ -8,7 +8,7 @@ module.exports = async (request, _response, next) => {
 
   const decoded = tokenDecoder(authorization);
 
-  if (!decoded.data) throw createError(401, 'Expired or invalid token');
+  if (!decoded) throw createError(401, 'Expired or invalid token');
 
   request.decodedData = decoded.data;
 
