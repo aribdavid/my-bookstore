@@ -1,6 +1,6 @@
-const { User } = require('../database/models'); 
+const { User } = require('../database/models/index'); 
 const createError = require('../utils/createError');
-const generateToken = require('../utils/generateJWT');
+const generateToken = require('../utils/jwtGenerator');
 
 const getByEmail = async (email) => {
   const user = await User.findOne({
