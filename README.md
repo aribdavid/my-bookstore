@@ -83,5 +83,6 @@ Você pode também usar o seguinte token nas requisições para evitar fazer o l
 `cd my-bookstore` <br/>
 `docker build -t my-bookstore-api .` <br/>
 `docker run -p 3300:3300 -d my-bookstore-api` <br/>
+
 **obs: a porta especificada no comando acima será a porta de acesso para aplicação no seu localhost**
 
