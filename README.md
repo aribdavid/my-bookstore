@@ -28,12 +28,15 @@ Aplicação se encontra hospedada no link https://aribdavid-my-bookstore.herokua
 Todas as rotas GET são autenticadas, para obter o token de autenticação você deve realizar uma requisição para o endpoint /login preenchendo o body com seu 
 email e senha registrados ou utilizando o exemplo abaixo:
 
-`{
+```
+{
 
 "email": "leo@test.com", <br/>
 "password: "123456"
 
-}`
+}
+
+```
 
 A requisição retorna um token que você DEVE incluir no campo authorization em todas as requisições GET
 
