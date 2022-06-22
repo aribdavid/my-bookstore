@@ -9,8 +9,20 @@ const getAll = async () => {
   return books;
 };
 
+const getById = async (id) => {
+  const book = await Book.findByPk(id, {
+    attributes: {
+    },
+  });
+
+  if (!book) throw createError(404, 'Book does not exist');
+
+  return book;
+};
+
 
 module.exports = {
-  getAll
+  getAll,
+  getById
 }
 
