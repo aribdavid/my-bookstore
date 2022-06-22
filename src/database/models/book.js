@@ -24,8 +24,8 @@ const Book = (sequelize, DataTypes) => {
     });
   }
 
-  book.associate = ({ Order }) => {
-    book.hasMany(Order, {
+  book.associate = ({ Order_item }) => {
+    book.hasMany(Order_item, {
       foreignKey: 'bookId',
       onDelete: 'CASCADE'
     });

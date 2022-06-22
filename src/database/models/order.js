@@ -1,7 +1,7 @@
 const Order = (sequelize, DataTypes) => {
   const order = sequelize.define('Order', {
       userId: DataTypes.INTEGER,
-      bookId: DataTypes.INTEGER
+      order_itemId: DataTypes.INTEGER
   });
 
  
@@ -12,9 +12,9 @@ const Order = (sequelize, DataTypes) => {
     });
   }
 
-  order.associate = ({ Book }) => {
-    order.belongsTo(Book, {
-      foreignKey: 'bookId',
+  order.associate = ({ Order_item }) => {
+    order.hasMany(Order_item, {
+      foreignKey: 'orderId',
       onDelete: 'CASCADE'
     });
   }
