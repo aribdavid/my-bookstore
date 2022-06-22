@@ -72,16 +72,16 @@ Você pode também usar o seguinte token nas requisições para evitar fazer o l
 
 #### Local:
 
-`cd my-bookstore`
-`npm install`
-`npm run dev`
+`cd my-bookstore` <br/>
+`npm install` <br/>
+`npm run dev` <br/>
 
 #### Docker:
 
 - Ou você pode criar uma imagem Docker da aplicação e rodar em um container utilizando os comandos abaixo:
 
-`cd my-bookstore`
-`docker build -t my-bookstore-api .`
-`docker run -p 3300:3300 -d my-bookstore-api` obs: a porta especificada nesse comando será a porta de acesso para aplicação no seu localhost
+`cd my-bookstore` <br/>
+`docker build -t my-bookstore-api .` <br/>
+`docker run -p 3300:3300 -d my-bookstore-api` obs: a porta especificada nesse comando será a porta de acesso para aplicação no seu localhost <br/>
 
 
