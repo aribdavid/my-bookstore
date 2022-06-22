@@ -5,16 +5,15 @@ const User = (sequelize, DataTypes) => {
     lastName: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    address: DataTypes.STRING,
+    address: DataTypes.STRING
   });
 
   user.associate = ({ Order }) => {
     user.hasMany(Order, {
-      foreignKey: 'id',
-      as: 'order',
+      foreignKey: 'userId',
       onDelete: 'CASCADE'
     });
-  }
+  }  
 
   return user;
 };

@@ -3,7 +3,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     return queryInterface.bulkInsert(
-      'Category',
+      'Categories',
       [
         {
           name: "Fantasy",
@@ -35,6 +35,6 @@ module.exports = {
   },
 
   async down(queryInterface, _Sequelize) {
-    return queryInterface.bulkDelete('Category', null, {});
+    return queryInterface.bulkDelete('Categories', null, {});
   }
 };

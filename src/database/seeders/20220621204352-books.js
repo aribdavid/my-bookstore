@@ -3,7 +3,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     return queryInterface.bulkInsert(
-      'Book',
+      'Books',
       [
         {
           title: "The Fellowship of the Ring",
@@ -125,6 +125,6 @@ module.exports = {
   },
 
   async down(queryInterface, _Sequelize) {
-    return queryInterface.bulkDelete('Book', null, {});
+    return queryInterface.bulkDelete('Books', null, {});
   }
 };
