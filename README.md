@@ -1,4 +1,4 @@
-# Binds.co BackEnd Challenge
+# Binds.co Back End Challenge
 
 ## Descrição
 
