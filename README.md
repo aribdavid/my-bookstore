@@ -21,11 +21,11 @@ Foi utilizado **Express** como framework pra criação da aplicação, **Sequeli
 
 
 ## Antes de Utilizar
-*
 
-Todas as rotas GET são autenticadas, para obter o **token** de autenticação você deve realizar uma requisição POST para o endpoint **/login** preenchendo o body da requisição com seu **email** e **senha** registrados. Aqui apresento 3 alternativas:
 
-*
+*Todas as rotas GET são autenticadas, para obter o **token** de autenticação você deve realizar uma requisição POST para o endpoint **/login** preenchendo o body da requisição com seu **email** e **senha** registrados. Aqui apresento 3 alternativas:
+
+
 
 1 - Você pode registrar um novo usuário utilizando o endpoint **/user** com o método POST. a body da requisição deve conter os seguintes campos:
 
@@ -59,12 +59,12 @@ Todas as rotas GET são autenticadas, para obter o **token** de autenticação v
 `"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoibGVvQHRlc3QuY29tIiwiaWF0IjoxNjU1ODcyODM4LCJleHAiOjE2NTU4NzM3Mzh9.-NQ7HkRlRb3AsFc_bsiqN5s9Zxe72tRNVYUvt4YUbPo"`
 
 
-OBS: A requisição retorna um token que você **DEVE** incluir no campo authorization do header em **TODAS** as requisições GET
+*OBS: A requisição retorna um token que você **DEVE** incluir no campo authorization do header em **TODAS** as requisições GET
 
 
 ## App em funcionamento
 
-Aplicação se encontra hospedada no link https://aribdavid-my-bookstore.herokuapp.com/ . 
+*Aplicação se encontra hospedada no link https://aribdavid-my-bookstore.herokuapp.com/ . 
 
 
 
