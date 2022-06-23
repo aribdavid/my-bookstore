@@ -23,7 +23,7 @@ Foi utilizado **Express** como framework pra criação da aplicação, **Sequeli
 ## Antes de Utilizar
 
 
-*Todas as rotas GET são autenticadas, para obter o **token** de autenticação você deve realizar uma requisição POST para o endpoint **/login** preenchendo o body da requisição com seu **email** e **senha** registrados. Aqui apresento 3 alternativas:
+* Todas as rotas GET são autenticadas, para obter o **token** de autenticação você deve realizar uma requisição POST para o endpoint **/login** preenchendo o body da requisição com seu **email** e **senha** registrados. Aqui apresento 3 alternativas:
 
 
 
@@ -42,7 +42,7 @@ Foi utilizado **Express** como framework pra criação da aplicação, **Sequeli
 
 ```
 
-2 - Você pode fazeruma requisição POST para o endpoint **/login** com esse usuário já registrado 
+2 - Você pode fazer uma requisição POST para o endpoint **/login** com esse usuário já registrado 
 
 ```
 {
@@ -59,12 +59,12 @@ Foi utilizado **Express** como framework pra criação da aplicação, **Sequeli
 `"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoibGVvQHRlc3QuY29tIiwiaWF0IjoxNjU1ODcyODM4LCJleHAiOjE2NTU4NzM3Mzh9.-NQ7HkRlRb3AsFc_bsiqN5s9Zxe72tRNVYUvt4YUbPo"`
 
 
-*OBS: A requisição retorna um token que você **DEVE** incluir no campo authorization do header em **TODAS** as requisições GET
+* OBS: A requisição retorna um token que você **DEVE** incluir no campo authorization do header em **TODAS** as requisições GET
 
 
 ## App em funcionamento
 
-*Aplicação se encontra hospedada no link https://aribdavid-my-bookstore.herokuapp.com/ . 
+* Aplicação se encontra hospedada no link https://aribdavid-my-bookstore.herokuapp.com/ . 
 
 
 
@@ -92,17 +92,18 @@ Foi utilizado **Express** como framework pra criação da aplicação, **Sequeli
 
 ## Instalação
 
-- Para executar o projeto localmente use os comandos abaixo:
+* Para executar o projeto localmente use os comandos abaixo:
 
 #### Local:
 
+`git clone https://github.com/aribdavid/my-bookstore/`
 `cd my-bookstore` <br/>
 `npm install` <br/>
 `npm run dev` <br/>
 
 #### Docker:
 
-- Ou você pode criar uma imagem Docker da aplicação e rodar em um container utilizando os comandos abaixo:
+* Você pode criar uma imagem Docker da aplicação e rodar em um container utilizando os comandos abaixo:
 
 `cd my-bookstore` <br/>
 `docker build -t my-bookstore-api .` <br/>
