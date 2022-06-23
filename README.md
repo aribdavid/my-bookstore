@@ -23,7 +23,7 @@ Foi utilizado **Express** como framework pra criação da aplicação, **Sequeli
 ## Antes de Utilizar
 
 
-* Todas as rotas GET são autenticadas, para obter o **token** de autenticação você deve realizar uma requisição POST para o endpoint **/login** preenchendo o body da requisição com seu **email** e **senha** registrados. Aqui apresento 3 alternativas:
+* Todas as rotas GET são autenticadas, para obter o **token** de autenticação você deve realizar uma requisição POST para o endpoint **/login** preenchendo o body da requisição com seu **email** e **senha** registrados. Aqui apresento 2 alternativas:
 
 
 
@@ -42,6 +42,9 @@ Foi utilizado **Express** como framework pra criação da aplicação, **Sequeli
 
 ```
 
+* OBS: A requisição retorna um token que você **DEVE** incluir no campo authorization do header em **TODAS** as requisições GET
+
+
 2 - Você pode fazer uma requisição POST para o endpoint **/login** com esse usuário já registrado 
 
 ```
@@ -54,12 +57,8 @@ Foi utilizado **Express** como framework pra criação da aplicação, **Sequeli
 
 ```
 
-3 - Você pode também usar o seguinte token nas requisições para evitar fazer o login:
-
-`"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoibGVvQHRlc3QuY29tIiwiaWF0IjoxNjU1ODcyODM4LCJleHAiOjE2NTU4NzM3Mzh9.-NQ7HkRlRb3AsFc_bsiqN5s9Zxe72tRNVYUvt4YUbPo"`
-
-
 * OBS: A requisição retorna um token que você **DEVE** incluir no campo authorization do header em **TODAS** as requisições GET
+
 
 
 ## App em funcionamento
