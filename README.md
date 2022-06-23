@@ -95,7 +95,7 @@ Foi utilizado **Express** como framework pra criação da aplicação, **Sequeli
 
 #### Local:
 
-`git clone https://github.com/aribdavid/my-bookstore/`
+`git clone https://github.com/aribdavid/my-bookstore/` <br/>
 `cd my-bookstore` <br/>
 `npm install` <br/>
 `npm run dev` <br/>
