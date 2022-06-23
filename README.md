@@ -27,7 +27,7 @@ Foi utilizado **Express** como framework pra criação da aplicação, **Sequeli
 
 
 
-1 - Você pode registrar um novo usuário utilizando o endpoint **/user** com o método POST. a body da requisição deve conter os seguintes campos:
+1 - Você pode registrar um novo usuário utilizando o endpoint **/user** com o método POST. o body da requisição deve conter os seguintes campos:
 
 ```
  {
