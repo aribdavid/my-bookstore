@@ -19,14 +19,30 @@ Foi utilizado **Express** como framework pra criação da aplicação, **Sequeli
 8 - Retorna os livros cadastrados ou individualmente de acordo com id <br/>
 9 - Retorna os autores já cadastrados ou individualmente de acordo com id <br/>
 
-## App em funcionamento
 
-Aplicação se encontra hospedada no link https://aribdavid-my-bookstore.herokuapp.com/ . 
+## Antes de Utilizar
+*
 
-## Observações
+Todas as rotas GET são autenticadas, para obter o **token** de autenticação você deve realizar uma requisição POST para o endpoint **/login** preenchendo o body da requisição com seu **email** e **senha** registrados. Aqui apresento 3 alternativas:
 
-Todas as rotas GET são autenticadas, para obter o token de autenticação você deve realizar uma requisição para o endpoint /login preenchendo o body com seu 
-email e senha registrados ou utilizando o exemplo abaixo:
+*
+
+1 - Você pode registrar um novo usuário utilizando o endpoint **/user** com o método POST. a body da requisição deve conter os seguintes campos:
+
+```
+ {
+ 
+ "firstName":"exemplo",
+ "lastName": "exemplo",
+ "email": "exemplo@exemplo.com",
+ "password": "exemplo",
+ "address":"exemplo"
+ 
+ }
+
+```
+
+2 - Você pode fazeruma requisição POST para o endpoint **/login** com esse usuário já registrado 
 
 ```
 {
@@ -38,11 +54,19 @@ email e senha registrados ou utilizando o exemplo abaixo:
 
 ```
 
-A requisição retorna um token que você **DEVE** incluir no campo authorization em **TODAS** as requisições GET
-
-Você pode também usar o seguinte token nas requisições para evitar fazer o login:
+3 - Você pode também usar o seguinte token nas requisições para evitar fazer o login:
 
 `"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoibGVvQHRlc3QuY29tIiwiaWF0IjoxNjU1ODcyODM4LCJleHAiOjE2NTU4NzM3Mzh9.-NQ7HkRlRb3AsFc_bsiqN5s9Zxe72tRNVYUvt4YUbPo"`
+
+
+OBS: A requisição retorna um token que você **DEVE** incluir no campo authorization do header em **TODAS** as requisições GET
+
+
+## App em funcionamento
+
+Aplicação se encontra hospedada no link https://aribdavid-my-bookstore.herokuapp.com/ . 
+
+
 
 ## Endpoints GET
 
